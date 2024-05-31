@@ -12,7 +12,7 @@ jobs:
   code-review:
     runs-on: ubuntu-latest
     steps:
-      - uses: fitomad/github-chatgpt-integration@main
+      - uses: Renzizza/genai-code-review@main
         with:
           openai-api-key: ${{ secrets.OPENAI_API_KEY }}
           github-token: ${{ secrets.GH_TOKEN }}
