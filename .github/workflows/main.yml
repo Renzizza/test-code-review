@@ -14,8 +14,8 @@ jobs:
     steps:
       - uses: fitomad/github-chatgpt-integration@main
         with:
-          openai-api-key: sk-proj-C23RTIqD6uCgFF8QJleiT3BlbkFJ6wDlC1kohSMiXERkBJAn
-          github-token: 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
+          openai-api-key: ${{ secrets.OPENAI_API_KEY }}
+          github-token: ${{ secrets.GH_TOKEN }}
           github-pr-id: ${{ github.event.number }}
           dev-lang: Swift
           openai-max-tokens: 4096
