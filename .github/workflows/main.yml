@@ -1,0 +1,21 @@
+name: App Code Review
+
+permissions:
+  contents: read
+  pull-requests: write
+
+on:
+  pull_request:
+    types: [opened, reopened]
+
+jobs:
+  code-review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: fitomad/github-chatgpt-integration@main
+        with:
+          openai-api-key: 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
+          github-token: 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
+          github-pr-id: ${{ github.event.number }}
+          dev-lang: Swift
+          openai-max-tokens: 4096
